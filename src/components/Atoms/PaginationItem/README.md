@@ -35,7 +35,7 @@ If "true" the component is selected.
 
 The size of the component.
 
-*Type:* "xxsmall" | "xsmall" | "small" | "medium" | "large" | "xlarge"
+*Type:* "xxsmall" | "xsmall" | "small" | "medium" | "large" | "xlarge" | "xxlarge"
 
 *Required:* false
 

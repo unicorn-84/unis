@@ -1,7 +1,9 @@
+import { IObjectKeys } from '.';
+
 /**
  * Breakpoints.
  */
-export interface IBreakpoints {
+export interface IBreakpoints extends IObjectKeys {
   xs: string;
   sm: string;
   md: string;

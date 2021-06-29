@@ -10,18 +10,27 @@ const basePaginationItemStyle = css`
   transition: background-color 0.3s ease-in-out;
 `;
 
+const sizeStyle = ({ size }: PaginationItemProps) => {
+  return css`
+    height: ${theme.spacing[size]};
+    width: ${theme.spacing[size]};
+    border-width: ${Number.parseInt(theme.spacing[size]) / 10}px;
+  `;
+};
+
 const shapeStyle = (shape: PaginationItemProps['shape']) => {
   switch (shape) {
     case 'circular':
       return css`
         border-radius: 100%;
       `;
+
     case 'rounded':
       return css`
         border-radius: 25%;
       `;
     default:
-      return;
+      return css``;
   }
 };
 
@@ -29,13 +38,7 @@ const PaginationItemContainer = styled.div<PaginationItemProps>`
   color: ${({ color }) => color && theme.palette[color]};
   background-color: ${({ selected }) => selected && 'currentColor'};
 
-  ${({ size }) =>
-    size &&
-    css`
-      height: ${theme.spacing[size]};
-      width: ${theme.spacing[size]};
-      border-width: ${`${Number.parseInt(theme.spacing[size]) / 10}px`};
-    `}
+  ${sizeStyle}
 
   ${({ shape }) => shapeStyle(shape)}
 

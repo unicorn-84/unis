@@ -11,7 +11,7 @@ export interface PaginationItemProps
   /**
    * The size of the component;
    */
-  size?: keyof ISpacing;
+  size: keyof ISpacing;
   /**
    * The shape of the components.
    */

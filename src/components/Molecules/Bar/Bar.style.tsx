@@ -48,28 +48,28 @@ function createVariantStyle({ variant }: BarProps) {
   switch (variant) {
     case 'primary':
       return css`
-        background-color: ${theme.palette.brand.primary};
-        color: ${theme.palette.text.light};
+        background-color: ${theme.palette.brandPrimary};
+        color: ${theme.palette.textLight};
       `;
     case 'secondary':
       return css`
-        background-color: ${theme.palette.brand.secondary};
-        color: ${theme.palette.text.light};
+        background-color: ${theme.palette.brandSecondary};
+        color: ${theme.palette.textLight};
       `;
     case 'light':
       return css`
-        background-color: ${theme.palette.fon.light};
-        color: ${theme.palette.text.primary};
+        background-color: ${theme.palette.fonLight};
+        color: ${theme.palette.textLight};
       `;
     case 'dark':
       return css`
-        background-color: ${theme.palette.fon.dark};
-        color: ${theme.palette.text.light};
+        background-color: ${theme.palette.fonDark};
+        color: ${theme.palette.textLight};
       `;
     case 'gray':
       return css`
-        background-color: ${theme.palette.fon.gray};
-        color: ${theme.palette.text.light};
+        background-color: ${theme.palette.fonGray};
+        color: ${theme.palette.textLight};
       `;
     default:
       return;

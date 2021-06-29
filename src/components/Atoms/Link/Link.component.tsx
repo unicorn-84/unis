@@ -1,10 +1,9 @@
 import React, { AnchorHTMLAttributes, MouseEvent } from 'react';
-import { TextProps } from '../../Typography/Text';
+import { IPalette } from '../../../theme/types';
 import StyledLink from './Link.style';
 
 export interface LinkProps
-  extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'color'>,
-    Pick<TextProps, 'color' | 'marked' | 'variant'> {
+  extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'color'> {
   /**
    * Whether the anchor is disabled.
    */
@@ -13,6 +12,22 @@ export interface LinkProps
    * Controls when the link should have an underline.
    */
   underline?: 'none' | 'always';
+  /**
+   * Applies the theme typography styles.
+   */
+  variant?: 'text' | 'strong' | 'small' | 'button';
+  /**
+   * A component type or primitive that is rendered as the type of the root element.
+   */
+  as?: React.ElementType;
+  /**
+   * The color of the component.
+   */
+  color?: keyof IPalette;
+  /**
+   * Defines text that should be marked or highlighted.
+   */
+  marked?: keyof IPalette;
 }
 
 const Link = ({
@@ -33,12 +48,12 @@ const Link = ({
     <StyledLink
       onClick={handleClick}
       aria-disabled={disabled}
-      {...props}
       disabled={disabled}
       underline={underline}
       color={color}
       marked={marked}
       variant={variant}
+      {...props}
     >
       {children}
     </StyledLink>

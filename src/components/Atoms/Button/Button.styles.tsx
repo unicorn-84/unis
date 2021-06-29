@@ -3,11 +3,11 @@ import { hexToChannels } from '../../../utils';
 import { ButtonProps } from '.';
 import { DefaultTheme as theme } from '../../../theme';
 
-const BRAND_PRIMARY_COLOR = theme.palette.brand.primary;
-const BRAND_SECONDARY_COLOR = theme.palette.brand.secondary;
+const BRAND_PRIMARY_COLOR = theme.palette.brandPrimary;
+const BRAND_SECONDARY_COLOR = theme.palette.brandSecondary;
 const LIGHT_COLOR = theme.palette.light;
 const GRAY_COLOR = theme.palette.gray;
-const FON_GRAY_COLOR = theme.palette.fon.gray;
+const FON_GRAY_COLOR = theme.palette.fonGray;
 
 const primaryColorStyles = css`
   background-color: ${BRAND_PRIMARY_COLOR};
@@ -87,9 +87,9 @@ const baseButtonStyles = css`
 
   ${theme.typography?.['button']};
 
-  padding: 0 ${theme.spacing?.small};
+  padding: 0 ${theme.spacing['small']};
   border: none;
-  border-radius: ${theme.spacing?.xxsmall};
+  border-radius: ${theme.spacing['small']};
   cursor: pointer;
   text-decoration: none;
   display: inline-flex;

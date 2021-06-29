@@ -1,23 +1,22 @@
+import { IObjectKeys } from '.';
+
 /**
  * Color palette.
  */
-export interface IPalette {
+export interface IPalette extends IObjectKeys {
   /**
    * Code for Brand colors.
    */
-  brand: {
-    primary: string;
-    secondary: string;
-  };
+  brandPrimary: string;
+  brandSecondary: string;
   /**
    * Code for Text colors.
    */
-  text: {
-    primary: string;
-    secondary: string;
-    light: string;
-    gray: string;
-  };
+  textPrimary: string;
+  textSecondary: string;
+  textLight: string;
+  textDark: string;
+  textGray: string;
   /**
    * Code for dark color.
    */
@@ -33,24 +32,7 @@ export interface IPalette {
   /**
    * Code for Fon colors.
    */
-  fon: {
-    dark: string;
-    light: string;
-    gray: string;
-  };
+  fonLight: string;
+  fonDark: string;
+  fonGray: string;
 }
-
-export type ColorNames =
-  | 'brandPrimary'
-  | 'brandSecondary'
-  | 'textPrimary'
-  | 'textSecondary'
-  | 'textLight'
-  | 'textDark'
-  | 'textGray'
-  | 'dark'
-  | 'light'
-  | 'gray'
-  | 'fonDark'
-  | 'fonLight'
-  | 'fonGray';

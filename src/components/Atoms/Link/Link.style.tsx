@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 import { LinkProps } from '.';
 import { DefaultTheme as theme } from '../../../theme';
-import { Colors } from '../../../theme/DefaultTheme/defaultPalette';
 
 const disabledStyles = css`
   pointer-events: none;
@@ -46,8 +45,8 @@ const StyledLink = styled.a<LinkProps>`
 
   ${({ variant }) => theme.typography[variant || 'text']};
 
-  color: ${({ color }) => color && Colors[color]};
-  background-color: ${({ marked }) => marked && Colors[marked]};
+  color: ${({ color }) => color && theme.palette[color]};
+  background-color: ${({ marked }) => marked && theme.palette[marked]};
 `;
 
 StyledLink.defaultProps = {

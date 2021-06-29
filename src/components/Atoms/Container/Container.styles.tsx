@@ -11,9 +11,9 @@ const StyledContainer = styled.div<ContainerProps>`
   max-width: ${props =>
     props.maxWidth ? props.theme.breakpoints[props.maxWidth] : '100%'};
   padding-left: ${props =>
-    props.disableGutters ? null : props.theme.spacing?.small};
+    props.disableGutters ? null : props.theme.spacing['small']};
   padding-right: ${props =>
-    props.disableGutters ? null : props.theme.spacing?.small};
+    props.disableGutters ? null : props.theme.spacing['small']};
 `;
 
 StyledContainer.defaultProps = {

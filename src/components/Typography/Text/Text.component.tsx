@@ -1,5 +1,5 @@
 import React, { FC, HTMLAttributes } from 'react';
-import { ColorNames } from '../../../theme/types';
+import { IPalette } from '../../../theme/types';
 import StyledText from './Text.style';
 
 export interface TextProps extends Omit<HTMLAttributes<HTMLElement>, 'color'> {
@@ -14,23 +14,11 @@ export interface TextProps extends Omit<HTMLAttributes<HTMLElement>, 'color'> {
   /**
    * The color of the component.
    */
-  color?: Extract<
-    ColorNames,
-    | 'brandPrimary'
-    | 'brandSecondary'
-    | 'textPrimary'
-    | 'textSecondary'
-    | 'textDark'
-    | 'textLight'
-    | 'textGray'
-  >;
+  color?: keyof IPalette;
   /**
    * Defines text that should be marked or highlighted.
    */
-  marked?: Extract<
-    ColorNames,
-    'brandPrimary' | 'brandSecondary' | 'fonLight' | 'fonDark' | 'fonGray'
-  >;
+  marked?: keyof IPalette;
 }
 
 const Text: FC<TextProps> = ({

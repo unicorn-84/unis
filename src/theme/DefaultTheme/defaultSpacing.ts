@@ -8,4 +8,5 @@ export const defaultSpacing: ISpacing = {
   medium: '52px',
   large: '78px',
   xlarge: '104px',
+  xxlarge: '130px',
 };

@@ -46,7 +46,8 @@ export default {
       description: 'The size of the component.',
       table: {
         type: {
-          summary: 'xxsmall | xsmall | small | medium | large | xlarge',
+          summary:
+            'xxsmall | xsmall | small | medium | large | xlarge | xxlarge',
         },
         defaultValue: {
           summary: 'small',
@@ -54,7 +55,15 @@ export default {
       },
       control: {
         type: 'select',
-        options: ['xxsmall', 'xsmall', 'small', 'medium', 'large', 'xlarge'],
+        options: [
+          'xxsmall',
+          'xsmall',
+          'small',
+          'medium',
+          'large',
+          'xlarge',
+          'xxlarge',
+        ],
       },
     },
     shape: {
